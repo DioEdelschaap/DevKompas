@@ -1,0 +1,18 @@
+# VS Code instellingen
+.vscode/
+
+# Systeembestanden
+.DS_Store
+Thumbs.db
+
+# Tijdelijke of ongewenste bestanden
+*.log
+*.tmp
+*.bak
+
+# Build output (indien je ooit npm/tools gebruikt)
+dist/
+build/
+
+# Node.js modules (indien later van toepassing)
+node_modules/
