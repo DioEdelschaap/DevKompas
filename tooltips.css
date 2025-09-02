@@ -1,0 +1,90 @@
+/* === DevKompas Tooltips === */
+
+/* Basis tooltip (rechts) */
+.dk-tooltip {
+  position: relative;
+  outline: none;
+}
+
+.dk-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translate(8px, -50%);
+  min-width: 16rem;
+  max-width: 24rem;
+  background: #1f2937;     /* bg-gray-800 */
+  border-radius: 0.5rem;   /* rounded-lg */
+  padding: 0.75rem;        /* p-3 */
+  box-shadow: 0 10px 15px rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .18s ease-out, transform .18s ease-out;
+  z-index: 40;
+  white-space: normal;
+  font-size: 0.75rem;      /* text-xs */
+}
+
+.dk-tooltip::before {
+  content: "";
+  position: absolute;
+  left: calc(100% + 2px);
+  top: 50%;
+  transform: translate(-8px, -50%) rotate(45deg);
+  width: 10px; height: 10px;
+  background: #1f2937;
+  opacity: 0;
+  transition: opacity .18s ease-out;
+  z-index: 41;
+}
+
+/* Hover/focus activeren */
+.dk-tooltip:hover::after,
+.dk-tooltip:hover::before,
+.dk-tooltip:focus-visible::after,
+.dk-tooltip:focus-visible::before {
+  opacity: 1;
+}
+
+.dk-tooltip:hover::after,
+.dk-tooltip:focus-visible::after {
+  transform: translate(0, -50%);
+}
+
+/* === Kleurvarianten (per blok) === */
+.dk-tooltip-green::after { border: 1px solid #22c55e; color: #bbf7d0; }
+.dk-tooltip-green::before { border-left: 1px solid #22c55e; border-bottom: 1px solid #22c55e; }
+
+.dk-tooltip-blue::after { border: 1px solid #3b82f6; color: #bfdbfe; }
+.dk-tooltip-blue::before { border-left: 1px solid #3b82f6; border-bottom: 1px solid #3b82f6; }
+
+.dk-tooltip-purple::after { border: 1px solid #a855f7; color: #e9d5ff; }
+.dk-tooltip-purple::before { border-left: 1px solid #a855f7; border-bottom: 1px solid #a855f7; }
+
+.dk-tooltip-red::after { border: 1px solid #ef4444; color: #fecaca; }
+.dk-tooltip-red::before { border-left: 1px solid #ef4444; border-bottom: 1px solid #ef4444; }
+
+.dk-tooltip-emerald::after { border: 1px solid #10b981; color: #a7f3d0; }
+.dk-tooltip-emerald::before { border-left: 1px solid #10b981; border-bottom: 1px solid #10b981; }
+
+.dk-tooltip-yellow::after { border: 1px solid #eab308; color: #fef08a; }
+.dk-tooltip-yellow::before { border-left: 1px solid #eab308; border-bottom: 1px solid #eab308; }
+
+.dk-tooltip-indigo::after { border: 1px solid #6366f1; color: #c7d2fe; }
+.dk-tooltip-indigo::before { border-left: 1px solid #6366f1; border-bottom: 1px solid #6366f1; }
+
+.dk-tooltip-pink::after { border: 1px solid #ec4899; color: #fbcfe8; }
+.dk-tooltip-pink::before { border-left: 1px solid #ec4899; border-bottom: 1px solid #ec4899; }
+
+.dk-tooltip-cyan::after { border: 1px solid #06b6d4; color: #a5f3fc; }
+.dk-tooltip-cyan::before { border-left: 1px solid #06b6d4; border-bottom: 1px solid #06b6d4; }
+
+.dk-tooltip-teal::after { border: 1px solid #14b8a6; color: #99f6e4; }
+.dk-tooltip-teal::before { border-left: 1px solid #14b8a6; border-bottom: 1px solid #14b8a6; }
+
+.dk-tooltip-orange::after { border: 1px solid #f97316; color: #fed7aa; }
+.dk-tooltip-orange::before { border-left: 1px solid #f97316; border-bottom: 1px solid #f97316; }
+
+.dk-tooltip-lime::after { border: 1px solid #84cc16; color: #d9f99d; }
+.dk-tooltip-lime::before { border-left: 1px solid #84cc16; border-bottom: 1px solid #84cc16; }

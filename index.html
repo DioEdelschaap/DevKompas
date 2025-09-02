@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevKompas</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography&version=3.4.1"></script>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' stroke='black' stroke-width='2' fill='white'/><polygon points='12,6 15,12 12,18 9,12' fill='black'/></svg>">
+    <link rel="stylesheet" href="tooltips.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body class="bg-gray-900 text-green-400">
 <header class="relative text-white sticky top-0 shadow z-50 bg-gray-800 bg-cover bg-center" style="background-image: url('images/matrix.png');">
@@ -20,70 +21,543 @@
         </h1>
     </div>
 </header>
-<section class="bg-gradient-to-r from-gray-800 to-gray-700 py-12 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Jouw gids voor programmeren, webontwikkeling en makersprojecten</h2>
-    <p class="text-lg text-green-300">Alle nuttige links, tutorials en tools overzichtelijk bij elkaar</p>
-</section>
+
 <main class="max-w-6xl mx-auto px-4 py-10 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4" aria-label="Categorieën">
+
+    <!-- Web Development Basics -->
     <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-blue-500 hover:shadow-lg hover:ring-2 hover:ring-blue-500 hover:shadow-blue-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-blue-400">Web Development Basics</h3>
-        <ul class="list-disc list-inside text-blue-400">
-            <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">W3Schools</a></li>
-            <li><a href="https://developer.mozilla.org/nl/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">MDN Docs</a></li>
-        </ul>
+    <h3 class="text-xl font-bold mb-2 text-blue-400">Web Development Basics</h3>
+    <ul class="list-disc list-inside text-blue-400 space-y-1">
+
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="MDN Web Docs - leer stap voor stap de basis van HTML, CSS en JavaScript.">
+            MDN - Web leren</a></li>
+
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Officiële JavaScript documentatie en referentie op MDN.">
+            JavaScript (MDN)</a></li>
+
+        <li><a href="https://www.typescriptlang.org/docs/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="TypeScript - een uitbreiding van JavaScript met types voor meer veiligheid.">
+            TypeScript - Docs</a></li>
+
+        <li><a href="https://html.spec.whatwg.org/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="De officiële HTML Living Standard - de actuele definitie van HTML.">
+            HTML Living Standard (WHATWG)</a></li>
+
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Praktische gids voor CSS Flexbox layouts met voorbeelden.">
+            CSS - Flexbox gids</a></li>
+
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Volledige handleiding voor CSS Grid layouts en voorbeelden.">
+            CSS - Grid gids</a></li>
+
+        <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="WCAG - richtlijnen voor toegankelijke websites en apps.">
+            WCAG - Toegankelijkheid</a></li>
+
+        <li><a href="https://www.w3schools.com/"
+            class="dk-tooltip dk-tooltip-blue hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="W3Schools - interactieve tutorials en voorbeelden voor webtechnologieën.">
+            W3Schools</a></li>
+
+    </ul>
     </div>
+
+    <!-- Frontend Frameworks & Styling -->
     <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-purple-500 hover:shadow-lg hover:ring-2 hover:ring-purple-500 hover:shadow-purple-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-purple-400">Frameworks & Styling</h3>
-        <ul class="list-disc list-inside text-purple-400">
-            <li><a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Tailwind CSS</a></li>
-            <li><a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Bootstrap</a></li>
-            <li><a href="https://heroicons.com" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Heroicons</a></li>
-        </ul>
+    <h3 class="text-xl font-bold mb-2 text-purple-400">Frontend Frameworks & Styling</h3>
+    <ul class="list-disc list-inside text-purple-400 space-y-1">
+
+        <li><a href="https://react.dev/learn"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="React - een library om component-gebaseerde user interfaces te bouwen.">
+            React - Learn</a></li>
+
+        <li><a href="https://nextjs.org/docs"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Next.js - framework bovenop React met routing, SSR en API-routes.">
+            Next.js - Docs</a></li>
+
+        <li><a href="https://vuejs.org/"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Vue.js - eenvoudig te leren alternatief voor React, flexibel en lichtgewicht.">
+            Vue.js - Docs</a></li>
+
+        <li><a href="https://tailwindcss.com/docs"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Tailwind CSS - utility-first CSS framework voor snelle en consistente styling.">
+            Tailwind CSS</a></li>
+
+        <li><a href="https://ui.shadcn.com/"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="shadcn/ui - herbruikbare UI componenten voor React/Next.js, gebouwd op Radix en Tailwind.">
+            shadcn/ui</a></li>
+
+        <li><a href="https://www.radix-ui.com/"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Radix UI - toegankelijke, ongestylede bouwstenen (primitives) voor React.">
+            Radix UI</a></li>
+
+        <li><a href="https://heroicons.com/"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Heroicons - set van gratis SVG-iconen, ideaal in combinatie met Tailwind.">
+            Heroicons</a></li>
+
+        <li><a href="https://getbootstrap.com/docs/"
+            class="dk-tooltip dk-tooltip-purple hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Bootstrap - klassiek frontend framework met grid en kant-en-klare componenten.">
+            Bootstrap - Docs</a></li>
+
+    </ul>
     </div>
-    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-yellow-500 hover:shadow-lg hover:ring-2 hover:ring-yellow-500 hover:shadow-yellow-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-yellow-400">Tools & IDE's</h3>
-        <ul class="list-disc list-inside text-yellow-400">
-            <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Visual Studio Code</a></li>
-            <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Git & GitHub</a></li>
-        </ul>
-    </div>
+ 
+    <!-- Backend & API's -->
     <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-red-500 hover:shadow-lg hover:ring-2 hover:ring-red-500 hover:shadow-red-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-red-400">Backend & Hosting</h3>
-        <ul class="list-disc list-inside text-red-400">
-            <li><a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Firebase</a></li>
-            <li><a href="https://formspree.io/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Formspree</a></li>
-            <li><a href="https://www.transip.nl/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">TransIP</a></li>
-            <li><a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Google Search Console</a></li>
-            <li><a href="https://www.hetzner.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Hetzner</a></li>
-            <li><a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Cloudflare</a></li>
-        </ul>
+    <h3 class="text-xl font-bold mb-2 text-red-400">Backend & API's</h3>
+    <ul class="list-disc list-inside text-red-400 space-y-1">
+
+        <li><a href="https://nodejs.org/en/docs"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Node.js - JavaScript runtime om code buiten de browser te draaien.">
+            Node.js - Docs</a></li>
+
+        <li><a href="https://expressjs.com/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Express - minimalistisch web framework voor Node.js, populair voor API's.">
+            Express - Docs</a></li>
+
+        <li><a href="https://fastify.dev/docs/latest/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Fastify - snel en lichtgewicht alternatief voor Express.">
+            Fastify - Docs</a></li>
+
+        <li><a href="https://docs.nestjs.com/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="NestJS - TypeScript framework voor schaalbare en gestructureerde Node-apps.">
+            NestJS - Docs</a></li>
+
+        <li><a href="https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Microsoft richtlijnen voor REST API ontwerp: consistente endpoints en best practices.">
+            REST API Design Guidelines</a></li>
+
+        <li><a href="https://swagger.io/docs/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="OpenAPI/Swagger - standaard voor API documentatie en interactieve docs.">
+            OpenAPI / Swagger</a></li>
+
+        <li><a href="https://www.apollographql.com/docs/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="GraphQL - querytaal voor API's; Apollo is een populaire implementatie.">
+            GraphQL - Apollo</a></li>
+
+        <li><a href="https://socket.io/docs/v4/"
+            class="dk-tooltip dk-tooltip-red hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Socket.io - real-time communicatie via WebSockets (bijv. chatapps).">
+            Socket.io - Docs</a></li>
+
+    </ul>
     </div>
-    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-orange-500 hover:shadow-lg hover:ring-2 hover:ring-orange-500 hover:shadow-orange-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-orange-400">Productiviteit & Utilities</h3>
-        <ul class="list-disc list-inside text-orange-400">
-            <li><a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Figma</a></li>
-            <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">W3C Validator</a></li>
-        </ul>
+
+    <!-- Databases & ORM -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-emerald-500 hover:shadow-lg hover:ring-2 hover:ring-emerald-500 hover:shadow-emerald-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-emerald-400">Databases & ORM</h3>
+    <ul class="list-disc list-inside text-emerald-400 space-y-1">
+
+        <li><a href="https://www.postgresql.org/docs/"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="PostgreSQL - krachtige open-source relationele database.">
+            PostgreSQL - Docs</a></li>
+
+        <li><a href="https://dev.mysql.com/doc/"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="MySQL/MariaDB - populaire relationele databases, vaak gebruikt bij webhosting.">
+            MySQL / MariaDB - Docs</a></li>
+
+        <li><a href="https://www.sqlite.org/docs.html"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="SQLite - lichtgewicht SQL database in één bestand, ideaal voor kleine projecten.">
+            SQLite - Docs</a></li>
+
+        <li><a href="https://www.mongodb.com/docs/"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="MongoDB - NoSQL database die JSON-documenten gebruikt in plaats van tabellen.">
+            MongoDB - Docs</a></li>
+
+        <li><a href="https://www.prisma.io/docs"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Prisma ORM - moderne ORM voor Node.js, ondersteunt meerdere databases.">
+            Prisma ORM - Docs</a></li>
+
+        <li><a href="https://orm.drizzle.team/"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Drizzle ORM - lichtgewicht TypeScript ORM, alternatief voor Prisma.">
+            Drizzle ORM - Docs</a></li>
+
+        <li><a href="https://sequelize.org/"
+            class="dk-tooltip dk-tooltip-emerald hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Sequelize - oudere maar veelgebruikte ORM voor Node.js en SQL databases.">
+            Sequelize - Docs</a></li>
+
+    </ul>
     </div>
-    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-teal-500 hover:shadow-lg hover:ring-2 hover:ring-teal-500 hover:shadow-teal-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-teal-400">IoT & DIY</h3>
-        <ul class="list-disc list-inside text-teal-400">
-            <li><a href="https://www.arduino.cc/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Arduino</a></li>
-            <li><a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Home Assistant</a></li>
-            <li><a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Raspberry Pi</a></li>
-            <li><a href="https://esphome.io/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">ESPHome</a></li>
-            <li><a href="https://www.shelly.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Shelly</a></li>
-            <li><a href="https://zigbeealliance.org/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Zigbee Alliance</a></li>
-        </ul>
+    
+    <!-- Tools & IDE's -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-yellow-500 hover:shadow-lg hover:ring-2 hover:ring-yellow-500 hover:shadow-yellow-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-yellow-400">Tools & IDE's</h3>
+    <ul class="list-disc list-inside text-yellow-400 space-y-1">
+
+        <li><a href="https://code.visualstudio.com/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Visual Studio Code - populaire gratis editor voor web- en softwareontwikkeling.">
+            Visual Studio Code</a></li>
+
+        <li><a href="https://git-scm.com/book/en/v2"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Git - versiebeheersysteem; Pro Git Book is de officiële handleiding.">
+            Git - Pro Git Book</a></li>
+
+        <li><a href="https://docs.github.com/en/get-started"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="GitHub - platform om Git repositories te hosten en samen te werken.">
+            GitHub - Docs</a></li>
+
+        <li><a href="https://docs.npmjs.com/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="npm - standaard package manager voor Node.js.">
+            npm - Docs</a></li>
+
+        <li><a href="https://pnpm.io/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="pnpm - snel en efficiënt alternatief voor npm en yarn.">
+            pnpm - Docs</a></li>
+
+        <li><a href="https://yarnpkg.com/getting-started"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Yarn - alternatieve package manager met focus op snelheid en consistentie.">
+            Yarn - Docs</a></li>
+
+        <li><a href="https://eslint.org/docs/latest/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="ESLint - tool om JavaScript/TypeScript code te analyseren en te verbeteren.">
+            ESLint - Docs</a></li>
+
+        <li><a href="https://prettier.io/docs/en/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Prettier - code formatter voor consistente opmaak in je project.">
+            Prettier - Docs</a></li>
+
+        <li><a href="https://www.postman.com/api-platform/api-testing/"
+            class="dk-tooltip dk-tooltip-yellow hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Postman - tool om API's te testen en documenteren.">
+            Postman - API Testing</a></li>
+
+    </ul>
     </div>
+
+    <!-- Hosting & DevOps -->
     <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-indigo-500 hover:shadow-lg hover:ring-2 hover:ring-indigo-500 hover:shadow-indigo-500 transition duration-300">
-        <h3 class="text-xl font-bold mb-2 text-indigo-400">DevOps & Containers</h3>
-        <ul class="list-disc list-inside text-indigo-400">
-            <li><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Docker</a></li>
-            <li><a href="https://docs.docker.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white font-semibold transition duration-300">Docker Docs</a></li>
-        </ul>
+    <h3 class="text-xl font-bold mb-2 text-indigo-400">Hosting & DevOps</h3>
+    <ul class="list-disc list-inside text-indigo-400 space-y-1">
+
+        <li><a href="https://docs.docker.com/"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Docker - containerplatform om apps te isoleren en overal te draaien.">
+            Docker - Docs</a></li>
+
+        <li><a href="https://docs.hetzner.com/"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Hetzner - Duitse cloudprovider voor VPS, servers en opslag.">
+            Hetzner - Docs</a></li>
+
+        <li><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Cloudflare Tunnel - veilige verbinding voor remote toegang tot je server.">
+            Cloudflare Tunnel</a></li>
+
+        <li><a href="https://nginx.org/en/docs/"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="NGINX - krachtige webserver en reverse proxy, veel gebruikt in DevOps.">
+            NGINX - Docs</a></li>
+
+        <li><a href="https://firebase.google.com/docs/hosting"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Firebase Hosting - hostingservice van Google voor webapps.">
+            Firebase Hosting</a></li>
+
+        <li><a href="https://docs.github.com/en/actions"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="GitHub Actions - CI/CD pipelines voor automatisch testen en deployen.">
+            GitHub Actions</a></li>
+
+        <li><a href="https://vercel.com/docs"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Vercel - hostingplatform, vooral geschikt voor Next.js apps.">
+            Vercel - Docs</a></li>
+
+        <li><a href="https://docs.netlify.com/"
+            class="dk-tooltip dk-tooltip-indigo hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Netlify - hostingplatform voor static sites en JAMstack apps.">
+            Netlify - Docs</a></li>
+
+    </ul>
     </div>
+
+    <!-- Auth & Security -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-pink-500 hover:shadow-lg hover:ring-2 hover:ring-pink-500 hover:shadow-pink-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-pink-400">Auth & Security</h3>
+    <ul class="list-disc list-inside text-pink-400 space-y-1">
+
+        <li><a href="https://authjs.dev/"
+            class="dk-tooltip dk-tooltip-pink hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Auth.js (voorheen NextAuth) - populaire oplossing voor authenticatie in Next.js/Node.">
+            Auth.js (NextAuth)</a></li>
+
+        <li><a href="https://jwt.io/"
+            class="dk-tooltip dk-tooltip-pink hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="JWT (JSON Web Tokens) - standaard voor veilige login-tokens tussen client en server.">
+            JWT.io</a></li>
+
+        <li><a href="https://cheatsheetseries.owasp.org/"
+            class="dk-tooltip dk-tooltip-pink hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="OWASP Cheat Sheets - best practices voor veilige webapplicaties.">
+            OWASP Cheat Sheets</a></li>
+
+        <li><a href="https://oauth.net/2/"
+            class="dk-tooltip dk-tooltip-pink hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="OAuth 2.0 - standaardprotocol voor inloggen met externe providers zoals Google of Facebook.">
+            OAuth 2.0</a></li>
+
+        <li><a href="https://www.npmjs.com/package/bcrypt"
+            class="dk-tooltip dk-tooltip-pink hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="bcrypt - library voor het veilig hashen van wachtwoorden.">
+            bcrypt - npm</a></li>
+
+    </ul>
+    </div>
+
+    <!-- Testing -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-cyan-500 hover:shadow-lg hover:ring-2 hover:ring-cyan-500 hover:shadow-cyan-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-cyan-400">Testing</h3>
+    <ul class="list-disc list-inside text-cyan-400 space-y-1">
+
+        <li><a href="https://jestjs.io/docs/getting-started"
+            class="dk-tooltip dk-tooltip-cyan hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Jest - testframework voor JavaScript/TypeScript, veel gebruikt bij React.">
+            Jest - Docs</a></li>
+
+        <li><a href="https://vitest.dev/guide/"
+            class="dk-tooltip dk-tooltip-cyan hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Vitest - moderne test-runner, supersnel en geïntegreerd met Vite-projecten.">
+            Vitest - Docs</a></li>
+
+        <li><a href="https://docs.cypress.io/guides/overview/why-cypress"
+            class="dk-tooltip dk-tooltip-cyan hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Cypress - end-to-end testtool voor webapps, draait direct in de browser.">
+            Cypress - Docs</a></li>
+
+        <li><a href="https://playwright.dev/docs/intro"
+            class="dk-tooltip dk-tooltip-cyan hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Playwright - end-to-end testing framework van Microsoft, ondersteunt meerdere browsers.">
+            Playwright - Docs</a></li>
+
+    </ul>
+    </div>
+
+    <!-- IoT & DIY -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-teal-500 hover:shadow-lg hover:ring-2 hover:ring-teal-500 hover:shadow-teal-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-teal-400">IoT & DIY</h3>
+    <ul class="list-disc list-inside text-teal-400 space-y-1">
+
+        <li><a href="https://www.arduino.cc/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Arduino - open-source platform voor microcontrollers, ideaal voor elektronica-projecten.">
+            Arduino</a></li>
+
+        <li><a href="https://www.raspberrypi.com/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Raspberry Pi - kleine, goedkope single-board computer voor hobby en IoT.">
+            Raspberry Pi</a></li>
+
+        <li><a href="https://www.home-assistant.io/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Home Assistant - open-source smarthome platform dat apparaten en diensten integreert.">
+            Home Assistant</a></li>
+
+        <li><a href="https://esphome.io/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="ESPHome - firmware om eenvoudig ESP32/ESP8266 sensoren en schakelaars in te stellen.">
+            ESPHome</a></li>
+
+        <li><a href="https://shelly.com/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Shelly - reeks WiFi-gestuurde smarthome modules en schakelaars.">
+            Shelly</a></li>
+
+        <li><a href="https://csa-iot.org/all-solutions/zigbee/"
+            class="dk-tooltip dk-tooltip-teal hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Zigbee - open standaard voor draadloze smarthome communicatie.">
+            Zigbee Alliance</a></li>
+
+    </ul>
+    </div>
+
+    <!-- Productiviteit & Utilities -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-orange-500 hover:shadow-lg hover:ring-2 hover:ring-orange-500 hover:shadow-orange-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-orange-400">Productiviteit & Utilities</h3>
+    <ul class="list-disc list-inside text-orange-400 space-y-1">
+
+        <li><a href="https://www.figma.com/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Figma - collaboratieve design tool voor UI/UX, werkt volledig in de browser.">
+            Figma</a></li>
+
+        <li><a href="https://penpot.app/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Penpot - open-source alternatief voor Figma, webbased en gratis.">
+            Penpot (open-source alternatief voor Figma)</a></li>
+
+        <li><a href="https://validator.w3.org/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="W3C Validator - controleert of je HTML en CSS voldoen aan de webstandaarden.">
+            W3C Validator</a></li>
+
+        <li><a href="https://www.notion.so/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Notion - tool voor notities, projectbeheer en documentatie.">
+            Notion</a></li>
+
+        <li><a href="https://obsidian.md/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Obsidian - knowledge management app gebaseerd op lokale markdown-bestanden.">
+            Obsidian</a></li>
+
+        <li><a href="https://www.canva.com/"
+            class="dk-tooltip dk-tooltip-orange hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Canva - gebruiksvriendelijke tool voor grafisch ontwerp, presentaties en social media posts.">
+            Canva</a></li>
+
+    </ul>
+    </div>
+
+    <!-- Learning & Roadmaps -->
+    <div class="bg-gray-800 rounded-xl shadow p-6 border-l-4 border-lime-500 hover:shadow-lg hover:ring-2 hover:ring-lime-500 hover:shadow-lime-500 transition duration-300">
+    <h3 class="text-xl font-bold mb-2 text-lime-400">Learning & Roadmaps</h3>
+    <ul class="list-disc list-inside text-lime-400 space-y-1">
+
+        <li><a href="https://roadmap.sh/"
+            class="dk-tooltip dk-tooltip-lime hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="roadmap.sh - interactieve schema's die de leerpaden voor frontend, backend en full-stack tonen.">
+            roadmap.sh</a></li>
+
+        <li><a href="https://www.freecodecamp.org/"
+            class="dk-tooltip dk-tooltip-lime hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="FreeCodeCamp - gratis leerplatform met uitgebreide cursussen en projecten.">
+            FreeCodeCamp</a></li>
+
+        <li><a href="https://fullstackopen.com/en/"
+            class="dk-tooltip dk-tooltip-lime hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Fullstack Open - gratis cursus van de Universiteit van Helsinki over moderne webontwikkeling.">
+            Fullstack Open</a></li>
+
+        <li><a href="https://developer.mozilla.org/"
+            class="dk-tooltip dk-tooltip-lime hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="MDN Web Docs - uitgebreide documentatie en tutorials over webtechnologieën.">
+            MDN Web Docs</a></li>
+
+        <li><a href="https://www.frontendmentor.io/"
+            class="dk-tooltip dk-tooltip-lime hover:text-white font-semibold underline"
+            target="_blank" rel="noopener noreferrer"
+            data-tooltip="Frontend Mentor - praktijkprojecten waarmee je frontend skills kunt oefenen.">
+            Frontend Mentor</a></li>
+
+    </ul>
+    </div>
+
 </main>
+
 <footer class="text-center text-green-500 py-6" aria-label="Footer">
     &copy; 2025 DevKompas. Alle rechten voorbehouden.
 </footer>
